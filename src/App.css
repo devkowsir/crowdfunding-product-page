@@ -503,6 +503,27 @@ pledge--modal */
     font-weight: 700;
   }
 
+  .discoveries {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .discoveries__progress {
+    grid-column: span 3;
+  }
+
+  .discoveries__progress div {
+    margin-top: 0;
+  }
+
+  .discoveries__discover:not(.discoveries__discover:first-child)::before {
+    position: absolute;
+    margin: 0 auto;
+    width: 2px;
+    height: 72px;
+    background-color: #ddd;
+  }
+
   .pledge--modal {
     position: relative;
   }
