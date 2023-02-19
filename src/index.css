@@ -65,7 +65,7 @@ h6 {
 }
 
 .container {
-  width: min(85%, 1200px);
+  width: min(85%, 800px);
   margin: 30px auto;
   padding: 2rem 1.5rem;
 
