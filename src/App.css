@@ -1,0 +1,547 @@
+/* Header and Nav */
+
+header {
+  background: linear-gradient(to bottom, hsla(0, 0%, 0%, 0.7) 0%, hsla(0, 0%, 0%, 0) 50%) top center/contain no-repeat, url(/images/image-hero-mobile.jpg) top center/contain no-repeat;
+  width: 100%;
+  aspect-ratio: 5/4;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 1.5rem;
+}
+
+.navbar__toggler {
+  background-color: transparent;
+  border: none;
+}
+
+.navbar__nav {
+  position: absolute;
+  left: 7.5%;
+  width: 85%;
+  top: 85px;
+  padding: 0;
+  transform: translateY(-150%);
+
+  opacity: 0;
+  border-radius: 8px;
+  background-color: white;
+  list-style-type: none;
+  transition: all 0.3s;
+  box-shadow: 0 100px 200px rgba(0, 0, 0, 0.5);
+}
+
+.navbar__nav.opened {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.navbar__item {
+  background-color: white;
+  border-top: 1px solid #ddd;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.navbar__item:first-child {
+  border-radius: 8px 8px 0 0;
+}
+
+.navbar__item:last-child {
+  border-radius: 0 0 8px 8px;
+}
+
+.navbar__link {
+  padding: 20px 24px;
+  display: block;
+
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+/* Banner */
+
+.banner.container {
+  margin-top: -60px;
+
+  text-align: center;
+}
+
+.banner__logo {
+  margin: -60px auto 20px;
+}
+
+.banner__header {
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+}
+
+.banner__description {
+  font-size: 14px;
+  color: var(--dark-gray);
+}
+
+.banner__footer {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  margin-top: 1.5rem;
+}
+
+.banner__footer button {
+  height: 56px;
+}
+
+.button--primary,
+.button--secondary {
+  cursor: pointer;
+  border: none;
+}
+
+.button--primary {
+  padding: 1rem 2rem;
+  border-radius: 28px;
+  background-color: var(--moderate-cyan);
+
+  color: white;
+  font-weight: 700;
+}
+
+.button--secondary {
+  width: 56px;
+  padding: 0;
+  aspect-ratio: 1;
+
+  border-radius: 28px;
+}
+
+.banner__action--secondary:hover svg circle {
+  fill: var(--dark-gray);
+}
+
+.button--secondary span {
+  display: none;
+}
+
+.banner .button--bookmarked circle {
+  fill: var(--moderate-cyan);
+}
+
+.banner .button--bookmarked path {
+  fill: white;
+}
+
+.banner .button--bookmarked span {
+  color: var(--moderate-cyan) !important;
+}
+
+/* Discoveries */
+
+.discoveries {
+  text-align: center;
+}
+
+.discoveries__discover:not(.discoveries__discover:first-child)::before {
+  content: '';
+  display: block;
+  width: 30%;
+  margin: 1.25rem auto 1rem;
+  height: 1px;
+
+  background-color: #ddd;
+}
+
+.discoveries__title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.discoveries__description {
+  color: var(--dark-gray);
+}
+
+.discoveries__progress,
+.discoveries__progress div {
+  height: 12px;
+  margin-top: 2rem;
+
+  border-radius: 6px;
+  background-color: #ddd;
+}
+
+.discoveries__progress div {
+  width: 80%;
+
+  background-color: var(--moderate-cyan);
+}
+
+/* About */
+
+.about__header h2 {
+  margin-bottom: 1.5rem;
+
+  font-size: 1.25rem;
+}
+
+.about__header p {
+  margin-bottom: 2rem;
+
+  color: var(--dark-gray);
+  font-size: 14px;
+}
+
+/* Pledge Block */
+
+.pledge {
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* pledge--selected
+pledge--modal */
+
+.pledge--disabled {
+  filter: opacity(0.5);
+}
+
+.pledge--modal.pledge--selected {
+  border: 1px solid var(--moderate-cyan);
+  outline: 1px solid var(--moderate-cyan);
+}
+
+.pledge__header {
+  margin-bottom: 1.5rem;
+
+  font-size: 12.5px;
+  cursor: pointer;
+}
+
+.pledge--modal .pledge__header {
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: 30px 1fr;
+}
+
+.pledge--modal .pledge__header::before {
+  content: '';
+  margin: auto auto;
+  grid-row: span 2;
+  display: inline-block;
+  width: 15px;
+  aspect-ratio: 1/1;
+
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px white, 0 0 0 7px #ddd;
+}
+
+.pledge__header h3:hover {
+  color: var(--moderate-cyan);
+}
+
+.pledge--modal.pledge--selected .pledge__header::before {
+  background-color: var(--moderate-cyan);
+}
+
+.pledge__header p {
+  margin-top: 0.5rem;
+
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--moderate-cyan);
+}
+
+.pledge--modal .pledge__body {
+  padding-bottom: 2rem;
+}
+
+.pledge__body p {
+  font-size: 14px;
+  color: var(--dark-gray);
+}
+
+.pledge__body div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-block: 1rem;
+}
+
+.pledge__body div span:first-child {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.pledge--modal .pledge__body div span:first-child {
+  font-size: 1.25rem;
+}
+
+.pledge__body div span:last-child {
+  font-size: 1rem;
+  color: var(--dark-gray);
+}
+
+.pledge--modal.pledge--selected .pledge__footer {
+  position: relative;
+}
+
+.pledge--modal.pledge--selected {
+  position: relative;
+}
+
+.pledge--modal.pledge--selected .pledge__footer::before {
+  content: '';
+  display: block;
+  width: calc(100% + 3rem);
+  height: 1px;
+  position: absolute;
+  left: -1.5rem;
+  top: -32px;
+
+  background-color: #ddd;
+}
+
+.pledge__footer button {
+  width: 180px;
+  padding-block: 0.75rem;
+}
+
+.pledge--disabled .pledge__footer button {
+  background-color: var(--dark-gray);
+}
+
+.pledge--modal .pledge__footer {
+  margin-top: 2rem;
+
+  text-align: center;
+}
+
+.pledge--modal .pledge__footer p {
+  margin-bottom: 1rem;
+
+  font-size: 0.85rem;
+  color: var(--dark-gray);
+}
+
+.pledge--modal .pledge__footer form {
+  display: flex;
+  gap: 10px;
+}
+
+.pledge--modal .pledge__footer form > * {
+  width: 50%;
+}
+
+.pledge--modal .pledge__footer form div {
+  position: relative;
+}
+
+.pledge--modal .pledge__footer form div::after {
+  content: '$';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1rem;
+
+  font-weight: 700;
+  color: var(--dark-gray);
+  filter: opacity(0.5);
+}
+
+.pledge--modal .pledge__footer form input {
+  max-width: 100%;
+  height: 100%;
+  padding: 0 1rem 0 2rem;
+
+  border-radius: 24px;
+  border: 1px solid #ddd;
+  font-weight: 500;
+}
+
+.pledge--modal .pledge__footer form button {
+  padding: 0.75rem 0;
+}
+
+.modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  padding-inline: 5vw;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: hsla(0, 0%, 0%, 0.5);
+  border: none;
+}
+
+.modal__container {
+  overflow-y: auto;
+  padding: 5vw 5vw;
+  width: min(90vw, 700px);
+  max-height: 80vh;
+  max-height: 80dvh;
+
+  border-radius: 8px;
+  background-color: white;
+}
+
+.backing__header div {
+  margin-block: 0.5rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.backing__header h2 {
+  font-size: 1.25rem;
+}
+
+.backing__header button {
+  cursor: pointer;
+  padding: 0.25rem;
+  aspect-ratio: 1/1;
+
+  border: none;
+  background-color: transparent;
+}
+
+.backing__header p {
+  font-size: 14px;
+  color: var(--dark-gray);
+}
+
+.completed {
+  text-align: center;
+}
+
+.completed img {
+  margin: 1rem auto;
+}
+
+.completed h2 {
+  margin-bottom: 1.5rem;
+
+  font-size: 1.25rem;
+}
+
+.completed p {
+  margin-bottom: 2rem;
+
+  font-size: 15px;
+  color: var(--dark-gray);
+}
+
+.completed button {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 700px) {
+  header {
+    background: linear-gradient(to bottom, hsla(0, 0%, 0%, 0.7) 0%, hsla(0, 0%, 0%, 0) 50%) top center/contain no-repeat, url(/images/image-hero-desktop.jpg) top center/contain no-repeat;
+    aspect-ratio: 7/2;
+  }
+
+  .navbar__toggler {
+    display: none;
+  }
+
+  .navbar .navbar__nav {
+    position: static;
+    width: unset;
+    display: flex;
+    transform: translate(0, 0);
+    opacity: 1;
+    background-color: transparent;
+    box-shadow: unset;
+  }
+
+  .navbar .navbar__item {
+    background-color: transparent;
+    border: none;
+  }
+
+  .navbar .navbar__link {
+    padding: 0.5rem 1rem;
+
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  h1.banner__header {
+    font-size: 1.75rem;
+  }
+
+  .banner__logo {
+    margin-top: -5rem;
+  }
+
+  .banner .button--secondary {
+    width: unset;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding-right: 1.5rem;
+    aspect-ratio: unset;
+  }
+
+  .banner .button--secondary svg {
+    width: 56px;
+  }
+
+  .banner .button--secondary span {
+    display: inline-block;
+    color: var(--dark-gray);
+    font-weight: 700;
+  }
+
+  .pledge--modal {
+    position: relative;
+  }
+
+  .pledge--modal .pledge__header {
+    grid-template-columns: 30px auto 1fr;
+    align-content: center;
+  }
+
+  .pledge--modal .pledge__header p {
+    line-height: 24px;
+
+    padding-top: 0;
+    margin-top: 0;
+    margin-left: 30px;
+  }
+
+  .pledge--modal .pledge__header::before {
+    grid-row: auto;
+  }
+
+  .pledge--modal .pledge__body div {
+    position: absolute;
+    top: 0.5rem;
+    right: 1.5rem;
+  }
+
+  .pledge--modal .pledge__footer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .pledge--modal .pledge__footer p {
+    margin-bottom: 0;
+    margin-right: auto;
+  }
+
+  .pledge--modal .pledge__footer form {
+    width: min(250px, 50%);
+  }
+}
