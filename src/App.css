@@ -86,7 +86,7 @@ header {
 
 .banner__footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 5%;
   margin-top: 1.5rem;
 }
@@ -522,6 +522,16 @@ pledge--modal */
     width: 2px;
     height: 72px;
     background-color: #ddd;
+  }
+
+  .backing__body > :not(.pledge--modal) {
+    position: relative;
+  }
+
+  .backing__body > :not(.pledge--modal) .pledge__footer {
+    position: absolute;
+    bottom: 2.5rem;
+    right: 1.5rem;
   }
 
   .pledge--modal {
